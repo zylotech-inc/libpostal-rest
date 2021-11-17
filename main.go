@@ -49,7 +49,7 @@ func main() {
 	}
 	port := os.Getenv("LISTEN_PORT")
 	if port == "" {
-		port = "8081"
+		port = "8080"
 	}
 	listenSpec := fmt.Sprintf("%s:%s", host, port)
 
