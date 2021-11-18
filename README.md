@@ -14,7 +14,7 @@ ls ./libpostal-rest
 ```
 
 ### Parser
-`curl -X POST -d '{"query": "100 main st buffalo ny"}' <host>:8080/parser`
+`curl -X POST -d '{"address": "100 main st buffalo ny"}' <host>:8080/parser`
 
 ** Response **
 ```
