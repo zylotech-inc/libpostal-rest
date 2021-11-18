@@ -26,6 +26,7 @@ type Response struct {
 }
 
 type OutputResponse struct {
+	Address  string
 	Street   string
 	City     string
 	State    string
@@ -208,7 +209,8 @@ func MultiParserHandler(w http.ResponseWriter, r *http.Request) {
 			}
 
 		}
-		out := OutputResponse{Street: strings.TrimSpace(Street.String()),
+		out := OutputResponse{Address: req[r].Query,
+			Street:   strings.TrimSpace(Street.String()),
 			City:     City.String(),
 			State:    State.String(),
 			Postcode: Postcode.String(),
